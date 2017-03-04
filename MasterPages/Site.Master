@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MovieRentalSystem.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+<style type="text/css">
+        
+        .style3
+        {
+            height: 30px;
+        }
+        </style>
+    </head>
+<body>
+    <form id="Form1" runat="server">
+             <div id="divMenu" 
+                 style="margin: 0px 10px 10px 10px; height: 150px; width: 1245px;">
+             
+                 <table style="width: 1256px; height: 27px" >
+                     <tr>
+                         <td>
+                             </td>
+                         <td align="right">
+                            <asp:ContentPlaceHolder ID="LoginContent" runat="server" /></td>
+                     </tr>
+                     </table>
+             
+             </div>
+        <div >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        
+    </form>
+</body>
+</html>

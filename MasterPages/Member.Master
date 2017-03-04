@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Member.master.cs" Inherits="TheProject.Member" MasterPageFile="~/MasterPages/Site.Master" %>
+
+
+<asp:Content runat="server" ID="Content3" ContentPlaceHolderID="HeadContent">
+    
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        #Form1
+        {
+            margin-right: 0px;
+        }
+    </style>
+
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <form id="Form1" runat="server">
+    
+    <div id="divMenu" style="margin: 5px; width: 158px; height: 600px; float: left">
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" style="height: 100px" EnableViewState="false"
+            IncludeStyleBlock="false" Orientation="Vertical" 
+            onmenuitemclick="NavigationMenu_MenuItemClick">
+            <Items>
+                <asp:MenuItem Text="Change Password" Value="Change Password" NavigateUrl="~/Members/ChangePassword.aspx" />
+                <asp:MenuItem Text="History" Value="History">
+                    <asp:MenuItem Text="Borrow" Value="Borrow"></asp:MenuItem>
+                    <asp:MenuItem Text="Request" Value="Request"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Edit Data" Value="Edit Data" NavigateUrl="~/Members/EditData.aspx">
+                </asp:MenuItem>
+                <asp:MenuItem Text="FeedBack" Value="FeedBack" NavigateUrl="~/Members/FeedBack.aspx">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+    </div>
+    <div id="divContentPages" style="margin: 5px; height: 600px; float: left;">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="LoginContent" runat="server">
+    
+    <table>
+    <tr>
+    <td class="style7">
+        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Medium" 
+        ForeColor="#000066"> welcome <%=Session["UserID"].ToString().ToUpper() %></asp:Label>
+        </td>
+        <td class="style7">
+        <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false"
+            IncludeStyleBlock="false" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="Contact Us" 
+                    Value="ContactUs"></asp:MenuItem>
+                <asp:MenuItem Text="LogOut" Value="LogOut" NavigateUrl="~/Default.aspx" />
+            </Items>
+                     </asp:Menu>
+                     </td>
+                     </tr>
+     </table>
+
+                     </asp:Content>

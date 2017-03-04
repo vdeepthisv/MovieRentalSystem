@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="TheProject.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="divTop" 
+        style="margin: 0px 10px 10px 10px; height: 150px; width: 1248px;">
+        <div class="title">
+            <h1>
+                ADMIN SETTINGS
+            </h1>
+        </div>
+    </div>
+    <div id="divMenu" style="margin: 5px; width: 158px; height: 600px; float: left">
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+            IncludeStyleBlock="false" Orientation="Vertical">
+            <Items>
+                <asp:MenuItem Text="Change Password" Value="Change Password" NavigateUrl="~/Admins/ChangePassword.aspx" />
+                <asp:MenuItem Text="Users" Value="Users">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Admins/Users/AddUser.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Edit" Value="Edit" NavigateUrl="~/Admins/Users/EditUser.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Search" Value="Search" NavigateUrl="~/Admins/Users/SearchUser.aspx">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Movies" Value="Movies">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Admins/Movies/AddMovie.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Edit" Value="Edit" NavigateUrl="~/Admins/Movies/EditMovie.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Search" Value="Search" NavigateUrl="~/Admins/Movies/SearchMovie.aspx">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Role" Value="Role">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Admins/Role/AddRole.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Edit" Value="Edit" NavigateUrl="~/Admins/Role/EditRole.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Search" Value="Search" NavigateUrl="~/Admins/Role/SearchRole.aspx">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Language" Value="Language">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Admins/Language/AddLanguage.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Edit" Value="Edit" NavigateUrl="~/Admins/Language/EditLanguage.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Search" Value="Search" NavigateUrl="~/Admins/Language/SearchLanguage.aspx">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Quality" Value="Quality">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Admins/Quality/AddQuality.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Edit" Value="Edit" NavigateUrl="~/Admins/Quality/EditQuality.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Search" Value="Search" NavigateUrl="~/Admins/Quality/SearchQuality.aspx">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Genre" Value="Genre">
+                    <asp:MenuItem Text="Add" Value="Add" NavigateUrl="~/Admins/Genre/AddGenre.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Edit" Value="Edit" NavigateUrl="~/Admins/Genre/EditGenre.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Search" Value="Search" NavigateUrl="~/Admins/Genre/EditGenre.aspx">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="History" Value="History">
+                    <asp:MenuItem Text="Borrows" Value="Borrows" NavigateUrl="~/Admins/History/Borrows.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Requests" Value="Requests" NavigateUrl="~/Admins/History/Requests.aspx">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="FeedBacks" Value="FeedBacks" NavigateUrl="~/Admins/FeedBacks/FeedBacks.aspx">
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log Out" Value="LogOut">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+    </div>
+    <div id="divContentPages" style="margin: 5px; height: 600px; float: left;">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+    </form>
+</body>
+</html>
